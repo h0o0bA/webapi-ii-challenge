@@ -6,6 +6,8 @@ const postRoutes = require("./data/postRoutes");
 
 const server = express();
 
+server.use(express.json());
+
 server.use("/posts", postRoutes);
 
 server.use("/", (req, res) => {
